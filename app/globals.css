@@ -2,32 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --button-card-card-bg: #131313;
+    --Text-text-white: #ededed;
+    --Text-text-gray: #676767;
+    --Text-text-white---on-dark: #f2f2f2;
+    --status-Progress-green: #9efa13;
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .catlogue {
+    color: #f1f1f1;
+    font-family: var(--font-next-poster);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 112.5%; /* 22.5px */
+    letter-spacing: 0.4px;
+  }
+  .banner {
+    color: #fff;
+    font-family: var(--font-next-book);
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 9.9px */
+  }
+  .title {
+    color: #ededed;
+    font-family: var(--font-next-book);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+  }
+  .description {
+    color: #676767;
+    font-family: var(--font-next-book);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 13.2px */
+  }
+  .icon {
+    color: #f2f2f2;
+    font-family: var(--font-neue-machina);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+  }
+  .tag {
+    color: #9efa13;
+    text-align: right;
+    font-family: var(--font-next-book);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 11px */
+  }
+  .date {
+    color: #ededed;
+    text-align: right;
+    font-family: var(--font-neue-machina);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%; /* 14px */
+  }
+  .bitcoin {
+    background: url('/bitcoin.png') lightgray -294px -57px / 258.848% 163.134%
+      no-repeat;
   }
 }
